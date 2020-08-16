@@ -1,0 +1,28 @@
+server:
+  port: 8033
+# 日志配置
+logging:
+  level:
+    com.yh.bigdata.source: debug
+    org.springframework: warn
+
+
+spring:
+  application:
+    name: tes-service
+  profiles:
+    active: dev
+
+  redis:
+    database: 0
+    host: localhost
+    password:
+    port: 6379
+    timeout: 500
+    ssl: false
+    lettuce:
+      pool:
+        max-wait: -1ms
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
